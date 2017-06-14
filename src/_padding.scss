@@ -1,0 +1,17 @@
+///
+/// Quickly define paddings.
+///
+/// TODO:   Document this mixin.
+/// USAGE:  @include padding($size-top, $size-boàttom, $size-right, $size-left)
+///
+/// $size-top     The size unit for the top padding.
+/// $size-bottom  The size unit for the border padding.
+/// $size-right   The size unit for the right padding.
+/// $size-left    The size unit for the left padding.
+///
+@mixin padding($size-top, $size-bottom, $size-right, $size-left) {
+    @if ($size-top    != null or $size-top    != false) { padding-top:    $size-top;    }
+    @if ($size-bottom != null or $size-bottom != false) { padding-bottom: $size-bottom; }
+    @if ($size-right  != null or $size-right  != false) { padding-right:  $size-right;  }
+    @if ($size-left   != null or $size-left   != false) { padding-left:   $size-left;   }
+}

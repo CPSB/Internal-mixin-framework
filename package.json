@@ -1,0 +1,25 @@
+{
+  "name": "activismebe-scss",
+  "version": "1.0.0",
+  "description": "Small SCSS framework for activism_be",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Activisme-be/SCSS-framework.git"
+  },
+  "keywords": [
+    "SCSS",
+    "Mixins",
+    "framework",
+    "activism"
+  ],
+  "author": "Tim Joosten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Activisme-be/SCSS-framework/issues"
+  },
+  "homepage": "https://github.com/Activisme-be/SCSS-framework#readme"
+}

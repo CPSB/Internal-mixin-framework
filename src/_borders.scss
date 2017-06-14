@@ -1,0 +1,87 @@
+/// Border color
+///
+/// The border-color mixin accepts up to four values, including null and false.
+///
+/// $color-top      The border color fot the top border.
+/// $color-bottom   The border color for the bottom border.
+/// $color-right    The border color for the right border.
+/// $color-left     The border color for the left border.
+///
+@mixin border-color($color-top, $color-bottom, $color-right, $color-left) {
+  @if ($color-top    != null or $color-top    != false) { border-top-color:    $color-top;    }
+  @if ($color-bottom != null or $color-bottom != false) { border-bottom-color: $color-bottom; }
+  @if ($color-right  != null or $color-right  != false) { border-right-color:  $color-right;  }
+  @if ($color-left   != null or $color-left   != false) { border-left-color:   $color-left;   }
+}
+
+/// Border style
+///
+/// The border-style mixin accepts up to four values, including null and false.
+///
+/// $style-top      The border style for the top border.
+/// $style-bottom   The border style for the bottom border.
+/// $style-right    The border style for the right border.
+/// $style-left     The border style for the left border.
+///
+
+@mixin border-style($style-top, $style-bottom, $style-right, $style-left) {
+  @if ($style-top    != null or $style-top    != false) { border-top-style:    $style-top;    }
+  @if ($style-bottom != null or $style-bottom != false) { border-bottom-style: $style-bottom; }
+  @if ($style-right  != null or $style-right  != false) { border-right-style:  $style-right;  }
+  @if ($style-left   != null or $style-left   != false) { border-left-style:   $style-left;   }
+}
+
+/// Border width
+///
+/// The border-width mixin accepts up to four widths, including null and false.
+///
+/// $width-top     The border width for the top border width.
+/// $width-bottom  The border width for the bottom border width.
+/// $width-right   The border width for the right border width.
+/// $width-left    The border width for the left border width.
+///
+
+@mixin border-width($width-top, $width-bottom, $width-right, $width-left) {
+  @if ($width-top    != null or $width-top    != false) { border-top-width:    $width-top;    }
+  @if ($width-bottom != null or $width-bottom != false) { border-bottom-width: $width-bottom; }
+  @if ($width-right  != null or $width-right  != false) { border-right-width:  $width-right;  }
+  @if ($width-left   != null or $width-left   != false) { border-left-width:   $width-top;    }
+}
+
+/// ------------------------------------------------------------------------------- ///
+/// Shorthand functions.                                                            ///
+/// ------------------------------------------------------------------------------- ///
+
+/// Border Radius (Shorthand)
+///
+/// These mixins provide a shorthand syntax to target and add border size to both corners on one side of a box.
+///
+/// Params:
+///   - $size   The size unit for the shorthand functions. Example: 5px;
+///
+/// Mixins:
+///   - border-top-radius(<size>);
+///   - border-right-radius(<size>);
+///   - border-bottom-radius(<size>);
+///   - border-left-radius(<size>);
+///
+
+@mixin border-top-radius($size) {
+  border-top-left-radius:  $size;
+  border-top-right-radius: $size;
+}
+
+@mixin border-right-radius($size) {
+  border-bottom-right-radius: $size;
+  border-top-right-radius:    $size;
+}
+
+@mixin border-bottom-radius($size) {
+  border-bottom-left-radius:  $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin border-left-radius($size) {
+  border-bottom-left-radius: $size;
+  border-top-left-radius:    $size;
+}

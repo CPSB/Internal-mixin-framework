@@ -1,0 +1,8 @@
+script:
+- "test/travis.rb"
+
+sudo: required
+
+language: sass
+before_install:
+- gem install sass
